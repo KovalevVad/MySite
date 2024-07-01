@@ -1,0 +1,22 @@
+:root {
+  font-family: 'Anonymous Pro';
+  --primary: #6C63FF;
+}
+
+
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/AnonymousPro-Regular.woff2') format('woff2'),
+  url('./fonts/AnonymousPro-Regular.ttf') format('ttf');
+}
+
+
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/AnonymousPro-Bold.woff2') format('woff2'),
+   url('./fonts/AnonymousPro-Bold.ttf') format('ttf');
+}
