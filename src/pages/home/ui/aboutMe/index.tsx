@@ -9,7 +9,7 @@ export const AboutMe = () => {
       <Title classNameContainer="AboutMe__title" size="large">Обо мне</Title>
       <div className="AboutMe__content">
         <div className="AboutMe__content-item">
-          <p>Меня зовут Вадим и я frontend-разрабочтик. Живу в Москве и очень увлечен веб-разработкой.
+          <p>Меня зовут Вадим и я frontend-разработчик. Живу в Москве и очень увлечен веб-разработкой.
           </p>
         </div>
         <div className="AboutMe__content-item">
