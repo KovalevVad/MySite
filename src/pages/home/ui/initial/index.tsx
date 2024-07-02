@@ -23,7 +23,7 @@ export const Initial = () => {
     <div className="initial" style={{ background: isOn ? "white" : "black" }}>
       <img src={myPhoto} alt="myPhoto" />
       <div className="initial__content">
-        <h1 style={{ color: isOn ? "black" : "white" }}>Frontend devoloper</h1>
+        <h1 style={{ color: isOn ? "black" : "white" }}>Frontend developer</h1>
         <img src={isOn ? lampOn : lampOff} onClick={handleClick} alt="lamp" />
         <div className="initial__content-arrow">
           <div>
