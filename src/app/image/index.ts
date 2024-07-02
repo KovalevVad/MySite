@@ -4,6 +4,7 @@ export { default as lampOff } from "./lamp/lampOff.png"
 export { default as lampOn } from "./lamp/lampOn.png"
 
 export { default as arrowClick } from "./vectors/ArrowClick.svg"
+export { default as burgerMenu } from "./vectors/burger.svg"
 
 export { default as html } from "./skills/html.png"
 export { default as css } from "./skills/css.png"

@@ -13,3 +13,9 @@
 .title-medium {
   font-size: 32px;
 }
+
+@media (max-width: 576px) {
+  .title {
+    margin-top: 70px;
+  }
+}

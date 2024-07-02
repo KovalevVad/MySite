@@ -20,7 +20,7 @@ export const listLayout = [
   {
     img: one,
     name: "Первая работа",
-    description: "первый сайт, который сверстал",
+    description: "Первый сайт, который сверстал",
     linkGit: "https://github.com/KovalevVad/Project-one",
     linkSite: "https://kovalevvad.github.io/Project-one/",
   },

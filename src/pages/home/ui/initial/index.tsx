@@ -5,7 +5,7 @@ import { myPhoto, lampOff, lampOn } from "src/app/image";
 import "./index.css";
 
 export const Initial = () => {
-  const [isOn, setIsOn] = useState(false);
+  const [isOn, setIsOn] = useState(true);
 
   const handleClick = () => {
     setIsOn((prev) => !prev);

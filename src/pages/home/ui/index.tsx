@@ -1,16 +1,27 @@
 import { AboutMe } from "./aboutMe";
+import { MobileAboutMe } from "./aboutMe/mobile";
+
 import { Initial } from "./initial";
+import { MobileInitial } from "./initial/mobile";
+
 import { Skills } from "./skills";
 import { Projects } from "./projects";
 
+import { useScreenWidth }  from "src/shared/hooks/useScreenWidth";
+
 import { telegramm, github } from "src/app/image";
+
+import { ScreenWidth } from "src/shared/constant/const";
 
 import "./index.css";
 
 export const HomePage = () => {
+
+  const isMobile = useScreenWidth(ScreenWidth.mobile);
+
   return (
     <div className="wrapper">
-      <Initial />
+      {isMobile ? <MobileInitial/> : <Initial />}
       <AboutMe />
       <Skills />
       <Projects />
