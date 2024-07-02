@@ -1,5 +1,4 @@
 import { AboutMe } from "./aboutMe";
-import { MobileAboutMe } from "./aboutMe/mobile";
 
 import { Initial } from "./initial";
 import { MobileInitial } from "./initial/mobile";
