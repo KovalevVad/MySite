@@ -19,10 +19,13 @@ interface cardProps {
   linkSite?: string;
 }
 
-
-
-const Project = ({ img, name, description, linkGit, linkSite }: cardProps) => {
-
+const Project = ({
+  img,
+  name,
+  description,
+  linkGit,
+  linkSite,
+}: cardProps) => {
   const isMobile = useScreenWidth(ScreenWidth.mobile);
 
   return (
@@ -33,10 +36,18 @@ const Project = ({ img, name, description, linkGit, linkSite }: cardProps) => {
         <p className="project__info-description">{description}</p>
         <span className="project__info-line"></span>
         <div className="project__info-buttons">
-          <Button linkSite={linkSite} sizeText={isMobile ? "14" : "16"} type="full">
+          <Button
+            linkSite={linkSite}
+            sizeText={isMobile ? "14" : "16"}
+            type="full"
+          >
             Посмотреть вживую
           </Button>
-          <Button linkGit={linkGit} sizeText={isMobile ? "14" : "16"} type="incomplete">
+          <Button
+            linkGit={linkGit}
+            sizeText={isMobile ? "14" : "16"}
+            type="incomplete"
+          >
             <img src={github} alt="github" />
             <span>Посмотреть код</span>
           </Button>
@@ -55,7 +66,7 @@ export const Projects = () => {
   };
 
   return (
-    <div className="projects">
+    <div className="projects" id="projects">
       <Title size={isMobile ? "medium" : "large"}>Проекты</Title>
       <div className="projects__buttons">
         <Button
@@ -69,7 +80,7 @@ export const Projects = () => {
           onClick={handleClick}
           type={isActive ? "incomplete" : "full"}
           sizeText={isMobile ? "14" : "24"}
-         >
+        >
           React/JS
         </Button>
       </div>
@@ -78,6 +89,7 @@ export const Projects = () => {
           ? listLayout.map((item) => {
               return (
                 <Project
+                  key={item.id}
                   linkSite={item.linkSite}
                   linkGit={item.linkGit}
                   img={item.img}
@@ -89,6 +101,7 @@ export const Projects = () => {
           : listReact.map((item) => {
               return (
                 <Project
+                  key={item.id}
                   linkSite={item.linkSite}
                   linkGit={item.linkGit}
                   img={item.img}

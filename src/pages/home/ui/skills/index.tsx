@@ -32,12 +32,16 @@ export const Skills = () => {
   const isMobile = useScreenWidth(ScreenWidth.mobile)
 
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <Title size={isMobile ? "medium" : "large"}>Skills</Title>
       <div className="skills__wrapper">
         {listCard.map((item) => {
-          return <Card name={item.name} img={item.img} colorBorder={item.color} />
-        })}
+          return <Card
+                  key={item.id}
+                  name={item.name}
+                  img={item.img}
+                  colorBorder={item.color} />
+                  })}
       </div>
     </div>
   )

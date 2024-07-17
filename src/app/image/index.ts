@@ -5,6 +5,8 @@ export { default as lampOn } from "./lamp/lampOn.png"
 
 export { default as arrowClick } from "./vectors/ArrowClick.svg"
 export { default as burgerMenu } from "./vectors/burger.svg"
+export { default as close } from "./vectors/close.svg"
+export { default as arrowBottom }  from "./vectors/arrowBottom.svg"
 
 export { default as html } from "./skills/html.png"
 export { default as css } from "./skills/css.png"
@@ -26,3 +28,6 @@ export { default as revo } from "./projects/revo.png"
 
 export { default as telegramm} from "./contact/telegramm.svg"
 export { default as github} from "./contact/github.svg"
+export { default as telegrammWh } from "./contact/telegrammWhite.svg"
+export { default as gitHubWh } from "./contact/githubWhite.svg"
+export { default as mail } from "./contact/mail.svg"

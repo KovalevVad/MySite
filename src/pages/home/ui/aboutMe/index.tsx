@@ -5,7 +5,7 @@ import "./index.css";
 export const AboutMe = () => {
 
   return (
-    <div className="AboutMe">
+    <div className="AboutMe" id="aboutMe">
       <Title classNameContainer="AboutMe__title" size="large">Обо мне</Title>
       <div className="AboutMe__content">
         <div className="AboutMe__content-item">

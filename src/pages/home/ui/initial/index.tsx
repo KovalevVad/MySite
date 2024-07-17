@@ -1,26 +1,33 @@
 import { useEffect, useState } from "react";
 
-import { myPhoto, lampOff, lampOn } from "src/app/image";
+import { myPhoto, lampOff, lampOn, arrowBottom } from "src/app/image";
+import { Contacts } from "../contact";
 
 import "./index.css";
 
 export const Initial = () => {
-  const [isOn, setIsOn] = useState(true);
+  const [isOn, setIsOn] = useState(sessionStorage.getItem("overflow") === '' ? true : false);
+  const [sessionValue, setSessionValue] = useState(sessionStorage.getItem("overflow") || "")
 
   const handleClick = () => {
     setIsOn((prev) => !prev);
   };
 
   useEffect(() => {
+
     if (!isOn) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
+      sessionStorage.setItem("overflow", "hidden");
+      setSessionValue("hidden");
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
+      sessionStorage.setItem("overflow", "");
+      setSessionValue("");
     }
   }, [isOn]);
 
   return (
-    <div className="initial" style={{ background: isOn ? "white" : "black" }}>
+    <div className="initial" style={{ background: (isOn && sessionValue === "") ? "white" : "black" }}>
       <img src={myPhoto} alt="myPhoto" />
       <div className="initial__content">
         <h1 style={{ color: isOn ? "black" : "white" }}>Frontend developer</h1>
@@ -42,7 +49,12 @@ export const Initial = () => {
           </div>
           <span>click</span>
         </div>
+        <div className="initial__content-bottom">
+          <span>Листай вниз</span>
+          <img className="initial__content-bottom-arrow" src={arrowBottom} alt="" />
+        </div>
       </div>
+      { isOn ? <Contacts /> : null }
     </div>
   );
 };

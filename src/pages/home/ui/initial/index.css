@@ -14,7 +14,7 @@
   position: relative;
   display: block;
   width: auto;
-  height: auto;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 228px;
@@ -50,4 +50,37 @@ h1 {
   text-align: center;
   color: #fff;
   margin-left: 80px;
+}
+
+.initial__content-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 400px;
+  gap: 10px;
+}
+
+.initial__content-bottom > span {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
+
+.initial__content-bottom-arrow {
+  animation: arrow 2s infinite;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
